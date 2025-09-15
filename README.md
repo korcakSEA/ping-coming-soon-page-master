@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/korcakSEA/ping-coming-soon-page-master.git)
-- Live Site URL: (https://github.com/korcakSEA/ping-coming-soon-page-master.git)
+- Live Site URL: (https://korcaksea.github.io/ping-coming-soon-page-master/)
 
 ## My process
 
