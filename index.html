@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  <!-- Fontawesome for icons -->
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <!-- Font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Sass compile -->
+  <link rel="stylesheet" href="./dist/css/style.css">
+
+  <title>Frontend Mentor | Ping coming soon page</title>
+</head>
+
+<body>
+  <main class="main">
+    <section class="content">
+      <div class="container">
+        <!-- Header -->
+        <div class="container__header">
+          <img src="./images/logo.svg" alt="Ping company logo" class="container__logo">
+          <div class="container__text">
+            <h1>We are launching <span>soon!</span></h1>
+            <p>Subscribe and get notified</p>
+          </div>
+        </div>
+
+        <!-- Email registration -->
+        <form class="container__form" action="/submit" method="POST" novalidate>
+          <div class="container__input">
+            <!-- Label is not displayed but put in here for screen reader -->
+            <label for="email" style="display: none;">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your email address..." class="container__inp" required>
+            <!-- display warning -->
+            <p class="js-warning" aria-live="polite"></p>
+          </div>
+          <div class="container__button">
+            <button type="submit" class="container__btn">Notify Me</button>
+          </div>
+        </form>
+      </div>
+      <div class="image">
+        <img src="./images/illustration-dashboard.png" aria-hidden="true" class="content__image">
+      </div>
+    </section>
+    <!-- Footer Starts -->
+    <footer class="footer">
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <p class="footer__copyright">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <!-- Link to JS -->
+  <script src="./index.js"></script>
+</body>
+
+</html>

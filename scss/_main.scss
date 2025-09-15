@@ -1,0 +1,30 @@
+@forward './section/content';
+@forward './section/footer';
+
+// Element Level Global Styling
+*, ::after, ::before{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: "Libre Franklin", sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+main{
+  // Max-width: 712px
+  width:min(85.33%, 44.5rem);
+  margin-top: 2rem;
+  margin-inline: auto; 
+}
+
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+

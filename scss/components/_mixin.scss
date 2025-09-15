@@ -1,0 +1,10 @@
+
+// Define media queries inside a mixin
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: 320px) { @content; }
+  }
+  @else if $breakpoint == tablet {
+    @media (min-width: 560px) { @content; }
+  }
+}

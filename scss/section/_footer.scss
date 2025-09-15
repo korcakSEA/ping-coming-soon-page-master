@@ -1,0 +1,44 @@
+@use '../components/base' as *;
+
+// Parent
+.footer {
+  width: 203px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-inline: auto;
+  gap: map-get($spacers, $key: 5);
+
+  // Social icon styling, Footer -> Child 1
+  &__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: map-get($spacers, $key: 3);
+
+    a {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $blue-200;
+      border-radius: 50%;
+      text-decoration: none;
+      color: $blue-500;
+
+      &:hover {
+        background-color: $blue-500;
+        border: 1px solid $blue-500;
+        color: $white;
+      }
+    }
+  }
+
+  // Copyright styling, Footer -> Child 2
+  &__copyright {
+    @include text-preset4-light;
+    color: $gray-400;
+  }
+}

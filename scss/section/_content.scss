@@ -1,0 +1,176 @@
+@use '../components/base' as *;
+
+// Coding will proceed from top to bottom.
+
+// Parent
+.content {
+  width: 100%;
+  height: clamp(31.375rem, 16rem + 62vw, 46.75rem);
+  margin-bottom: map-get($map: $spacers, $key: 11);
+
+  @include respond(tablet) {
+    margin-bottom: map-get($map: $spacers, $key: 9);
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Parent: Content -> Child 1
+.container {
+  width: 90%;
+  margin-inline: auto;
+
+
+  // HEADER
+  // Parent of logo and text
+  &__header {
+    text-align: center;
+    // Space between header and email registration
+    margin-bottom: map-get($map: $spacers, $key: 7);
+  }
+
+  // Header child 1
+  &__logo {
+    width: clamp(3.375rem, 2rem + 7vw, 5.375rem);
+    margin-inline: auto;
+    margin-bottom: map-get($map: $spacers, $key: 7);
+
+    @include respond(tablet) {
+      margin-bottom: map-get($map: $spacers, $key: 8);
+    }
+  }
+
+  // Header child 2
+  &__text {
+    h1 {
+      @include text-preset1-light;
+      color: $gray-400;
+      margin-bottom: map-get($map: $spacers, $key: 2);
+
+      @include respond(tablet) {
+        margin-bottom: map-get($map: $spacers, $key: 3);
+
+      }
+
+      span {
+        @include text-preset1-bold;
+        color: $blue-950;
+      }
+    }
+
+    p {
+      @include text-preset4-light;
+      color: $blue-950;
+
+      @include respond(tablet) {
+        @include text-preset2-light;
+      }
+    }
+  }
+
+  // EMAIL REGISTRATION
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(tablet) {
+      flex-direction: row;
+      gap: map-get($map: $spacers, $key: 3);
+    }
+  }
+
+  // Input Container
+  &__input {
+    flex: 1;
+
+    @include respond(tablet) {
+      flex: 4;
+    }
+  }
+
+  // Input styling
+  &__inp {
+    @include text-preset4-light;
+    font: inherit;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: map-get($map: $spacers, $key: 2);
+    padding-inline: map-get($spacers, 5);
+    color: $blue-200;
+    border: 1px solid $blue-200;
+    border-radius: 100vh;
+
+    @include respond(tablet) {
+      @include text-preset3-light;
+      height: 3.5rem;
+    }
+
+    &::placeholder {
+      color: $blue-200;
+    }
+  }
+
+  // Button Container
+  &__button {
+    flex: 1;
+
+    @include respond(tablet) {
+      flex: 2;
+    }
+  }
+
+  
+  // Button styling
+  &__btn {
+    @include text-preset4-semiBold;
+    font: inherit;
+    width: 100%;
+    height: 2.5rem;
+    color: $white;
+    background-color: $blue-500;
+    box-shadow: 0 3px 5px rgba($color: $blue-500, $alpha: 0.5);
+    border: none;
+    border-radius: 100vh;
+    cursor: pointer;
+
+    @include respond(tablet) {
+      @include text-preset3-semiBold;
+      height: 3.5rem;
+    }
+
+    &:hover {
+      background-color: rgba($color: $blue-500, $alpha: 0.7);
+    }
+  }
+}
+
+// Parent: Content -> Child 2
+.content__image {
+  width: clamp(20rem, 5.77rem + 71.5vw, 40rem);
+  margin-inline: auto;
+}
+
+
+// Email verification notice
+.js-warning {
+  @include text-preset4-italic;
+  color: $red-400;
+  padding-inline: map-get($map: $spacers, $key: 6);
+  display: block;
+  padding-inline: 2rem;
+  
+  &:empty{
+    display: none
+  }
+}
+
+.gap{
+  gap: 24px;
+
+  @include respond(tablet){
+    gap:1rem;  
+  }
+}

@@ -1,0 +1,50 @@
+@mixin text-style($size, $weight, $lineHeight, $letterSpacing){
+  font-family: "Libre Franklin", sans-serif;
+  font-size:      $size;
+  font-weight:    $weight;
+  line-height:    $lineHeight;
+  letter-spacing: $letterSpacing;
+}
+
+// Mixin Version To be able to use at Media Queries */
+// Preset 1 20px -> 48px
+@mixin text-preset1-bold {
+  @include text-style(clamp(1.25rem, -0.42rem + 7vw, 3rem), 700, 1.25, 0);
+}
+@mixin text-preset1-light {
+  @include text-style(clamp(1.25rem, -0.42rem + 7vw, 3rem), 300, 1.25, 0);
+}
+
+// Preset 2
+@mixin text-preset2-bold {
+  @include text-style(1.25rem, 700, 1.25, 0);
+}
+@mixin text-preset2-light {
+  @include text-style(1.25rem, 300, 1.25, 0);
+}
+
+// Preset 3
+@mixin text-preset3-semiBold {
+  @include text-style(1rem, 600, 1.25, 0);
+}
+@mixin text-preset3-light {
+  @include text-style(1rem, 300, 1.25, 0);
+}
+
+// Preset 4
+@mixin text-preset4-semiBold {
+  @include text-style(0.75rem, 600, 1.25, 0);
+}
+@mixin text-preset4-light {
+  @include text-style(.75rem, 300, 1.25, 0);
+}
+@mixin text-preset4-italic {
+  @include text-style(.75rem, 300, 1.25, 0);
+  font-style: italic;
+}
+
+// Preset 5
+@mixin text-preset5-italic {
+  @include text-style(.625rem, 300, 1.25, 0);
+  font-style: italic;
+}

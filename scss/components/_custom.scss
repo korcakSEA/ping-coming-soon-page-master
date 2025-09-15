@@ -1,0 +1,44 @@
+// Variables 
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white:    #fff;
+$gray-50:  #FBFCFF;
+$gray-100: #f8f9fa;
+$gray-400: #ced4da;
+$black:    #000;
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$red-400:   #FF5466;
+$green-500: #2ECC71;
+$blue-200:  #C2D3FF;
+$blue-500:  #4C7BF3;
+$blue-950:  #15202A;
+// scss-docs-end color-variables      
+
+// Spacing
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,   // 4px
+  2: $spacer * .5,    // 8px
+  3: $spacer,         // 16px
+  4: $spacer * 1.25,  // 20px
+  5: $spacer * 1.5,   // 24px
+  6: $spacer * 2,     // 32px
+  7: $spacer * 2.5,   // 40px
+  8: $spacer * 3,     // 48px
+  9: $spacer * 4.5,   // 72px
+ 10: $spacer * 6,     // 96px
+ 11: $spacer * 7.5,   // 120px
+);
+// scss-docs-end spacer-variables-maps
+
+//Media Queries Breakpoints
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+// $desktop: 1024px;
